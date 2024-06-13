@@ -13,3 +13,14 @@ document.getElementById('form').addEventListener('submit', function(event) {
         document.getElementById('form').reset();
     }
 });
+
+function check() {
+    var submit = document.getElementsByName('submit')[0];
+    if (document.getElementById('input-personal-data-btn').checked) {
+        alert('Подтвердите согласие на обработку ваших данных.');
+        submit.disabled = '';
+    }
+    else {
+        submit.disabled = 'disabled';
+    }
+}
